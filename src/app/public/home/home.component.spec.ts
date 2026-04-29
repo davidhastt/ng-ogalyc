@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainColumnComponent } from './maincolumn.component';
+import { MainColumnComponent } from './home.component';
 
 describe('MainColumnComponent', () => {
   let component: MainColumnComponent;

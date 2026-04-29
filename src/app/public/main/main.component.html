@@ -1,10 +1,27 @@
 <app-header></app-header>
 
-<app-rigthsidebar></app-rigthsidebar>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 border-b newspaper-border">
 
-<app-maincolumn></app-maincolumn>
+    <aside class="lg:col-span-2 border-r newspaper-border p-4 space-y-8 order-2 lg:order-1">
+        <app-leftsidebar></app-leftsidebar>
+    </aside>
 
-<app-leftsidebar></app-leftsidebar>
+    <!-- Main Content -->
+    <main class="lg:col-span-7 p-6 border-r newspaper-border order-1 lg:order-2">
+        <router-outlet></router-outlet>
+    </main>
+
+
+    <!-- Right Sidebar -->
+    <aside class="lg:col-span-3 p-4 space-y-8 order-3">
+        <app-rigthsidebar></app-rigthsidebar>
+    </aside>
+
+    
+
+
+
+</div>
 
 <app-footer></app-footer>
 
