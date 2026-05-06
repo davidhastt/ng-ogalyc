@@ -6,6 +6,8 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptors'
 import { LOCALE_ID } from '@angular/core';
 
 
+
+
 export const appConfig: ApplicationConfig = {
   providers: [
     // Rutas principales
