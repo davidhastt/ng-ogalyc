@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PostModel } from '../../core/models/post.model';
-import { PostsService } from '../services/posts.service';
+import { PostsService } from '../../core/services/posts.service';
 import { TruncatePipe } from '../../core/pipes/truncate.pipe';
 
 @Component({
