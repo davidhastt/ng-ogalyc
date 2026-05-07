@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-rigthsidebar',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './rigthsidebar.component.html',
   styleUrl: './rigthsidebar.component.css',
 })

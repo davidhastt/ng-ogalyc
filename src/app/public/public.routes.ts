@@ -7,6 +7,7 @@ export const publicRoutes: Routes = [
     component: MainComponent,
     children: [
         {path: "", loadComponent: () => import("./home/home.component").then(m => m.HomeComponent)},
+        {path: "ediciones", loadComponent:()=> import("./ediciones/ediciones.component").then(m=>m.EdicionesComponent) }
     ]
   }
 ];
