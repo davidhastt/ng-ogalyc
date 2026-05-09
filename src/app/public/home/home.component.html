@@ -22,9 +22,11 @@
     </article>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
-        <article *ngFor="let post of posts" class="space-y-2">
-            <h3 class="text-xl font-bold leading-tight hover:underline cursor-pointer">{{ post.titulo }}</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">{{ post.resumen | truncate:200 }}</p>
-        </article>
+        @for (post of posts(); track post.id_archivo) {
+            <article  class="space-y-2">
+                <h3 class="text-xl font-bold leading-tight hover:underline cursor-pointer">{{ post.titulo }}</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">{{ post.resumen | truncate:200 }}</p>
+            </article>
+        }
     </div>
 </main>

@@ -1,6 +1,6 @@
 
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { PostModel } from '../../core/models/post.model';
 import { PostsService } from '../../core/services/posts.service';
 import { TruncatePipe } from '../../core/pipes/truncate.pipe';
@@ -11,16 +11,16 @@ import { TruncatePipe } from '../../core/pipes/truncate.pipe';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit {
-  posts: PostModel[] = [];
+export class HomeComponent implements OnInit {  
+  posts = signal<PostModel[]>([]);
 
   constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
     
-    this.postsService.getRandomPost().subscribe((posts) => {
-      this.posts = posts;
-      console.log(this.posts);
+    this.postsService.getRandomPost().subscribe((posts) => {      
+      this.posts.set(posts);
+      //console.log(this.posts);
 
     });
     
