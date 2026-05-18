@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { EdicionesComponent } from './ediciones.component';
 
-describe('Ediciones', () => {
-  let component: EdicionesComponent;
-  let fixture: ComponentFixture<EdicionesComponent>;
+import { EjeComponent } from './eje.component';
+
+describe('EjeComponent', () => {
+  let component: EjeComponent;
+  let fixture: ComponentFixture<EjeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EdicionesComponent]
+      imports: [EjeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EdicionesComponent);
+    fixture = TestBed.createComponent(EjeComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
