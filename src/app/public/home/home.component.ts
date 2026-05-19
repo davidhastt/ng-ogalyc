@@ -4,10 +4,11 @@ import { Component, OnInit, signal } from '@angular/core';
 import { PostModel } from '../../core/models/post.model';
 import { PostsService } from '../../core/services/posts.service';
 import { TruncatePipe } from '../../core/pipes/truncate.pipe';
+import { EdicionesComponent } from '../ediciones/ediciones.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, TruncatePipe],
+  imports: [CommonModule, TruncatePipe,EdicionesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
